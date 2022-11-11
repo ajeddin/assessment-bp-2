@@ -22,9 +22,11 @@
 */
 
 //CODE HERE
+const greetUser = (username) => {
+    console.log(`Welcome Back ${username}`);
+}
 
-
-
+greetUser('Andrew')
 
 
 //////////////////PROBLEM 2////////////////////
