@@ -20,6 +20,15 @@
 */
 
 //CODE HERE
+class Employee{
+    constructor(name, shift){
+        this.name = name
+        this.shift= shift
+    }
+    getSchedule(){
+        console.log(`${this.name} works on ${this.shift}`);
+    }
+}
 
 
 
@@ -34,14 +43,14 @@
 */
 
 //CODE HERE
-
+let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
-
+empOne.getSchedule()
 
 /*
     Make a copy of the empOne object
@@ -51,13 +60,16 @@
     Change the name of `empTwo` to 'Nick'.
 
     Hint: you can do this inline with the 
-    spread operator or reassign it using 
+    spread operator or reassign it using // ask about this
     dot or bracket notation.
 */
 
 //CODE HERE
-
-
+empTwo = {
+    ...empOne
+}
+empTwo.name= 'Nick'
+console.log(empTwo);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -83,8 +95,19 @@
 */
 
 //CODE HERE
-
-
+class Manager extends Employee{
+    constructor(name, shift,employees) {
+        super(name,shift)
+        this.employees=employees
+        
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${this.employees}`);
+    }
+    addEmployee(emp){
+        this.employees += ` and ${emp}`
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -98,7 +121,7 @@
 */
 
 //CODE HERE
-
+let manager = new Manager('Winston','weekday mornings, weekday afternoons', 'Cece and Schmidt'  )
 
 /*
     Call the `getEmployees` method on the
@@ -106,19 +129,20 @@
 */
 
 //CODE HERE
-
+manager.getEmployees()
 /*
-    Call the `addEmployee` method on the 
-    `manager` object passing in the string 
-    'Coach' or whatever name you'd like.
+Call the `addEmployee` method on the 
+`manager` object passing in the string 
+'Coach' or whatever name you'd like.
 */
 
 //CODE HERE 
-
+manager.addEmployee('Coach')
 /*
-    Call the `getEmployees` method on the
-    `manager` object again to confirm 
-    that an employee was added.
+Call the `getEmployees` method on the
+`manager` object again to confirm 
+that an employee was added.
 */
 
 //CODE HERE
+manager.getEmployees()
