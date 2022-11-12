@@ -179,3 +179,5 @@ console.log(indexTwo);
 console.log(dealCopy);
 
 //NEED HELP IN MAKING IT MORE EFFIECENT
+
+console.log(`If didnt msg you already i must have already forgotten about telling you, i need help with function chaining, replace functions, selecting from multiple obj in an array, using callback syntax, `); 
