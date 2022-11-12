@@ -128,44 +128,54 @@ const deals = [
     to be itself, but use the `replace` method
     to replace the 15 with a 10.
 */
-
+console.log('-----------------------------------------\n-----------------------------------------');
 //CODE HERE
 
 // deal = deals.replace(deals.title ,'10% Off!')
 // console.log(deal);
-dealCopy= deals
+dealCopy=[...deals];
 const index = dealCopy.findIndex((el) => el.title === '15% Off!')
 console.log(index);
 // dealCopy[index] = {
-//     title: '10% Off!', 
-//     desc: 'Applied to your entire order when you spend $30 or more'
-// }
+    //     title: '10% Off!', 
+    //     desc: 'Applied to your entire order when you spend $30 or more'
+    // }
+    
+    
+    
+    
+    
+    dealCopy[index].title= dealCopy[index].title.toString().replace('15',  '10') ///// need help with this it works not effienct tho
+    console.log(dealCopy);
+    // title: '10% Off!', 
+    // desc: 'Applied to your entire order when you spend $30 or more'
+    
+    // console.log(dealCopy);     // bad way remind self to ask about it 
+    /*
+    The restaurant is going to continue its
+    family deal for another month. 
+    
+    Reassign the value of the second deal's desc
+    to be itself, but use the `replace` method
+    to replace the word March with April.
+    
+    You should also make sure that there is no
+    whitespace in this string, since it seems
+    to be displaying wrong on the live site.
+    */
+   
+   //CODE HERE
+   
+   // dealCopy.toString().replace(dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!'),  'This deal lasts until the end of April!')    ASK HOW TO CHAIN TOINDEX AND REPLACE
+   // const index2 = dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!')
+   // dealCopy.toString().replace(dealCopy[index2],  'This deal lasts until the end of April!')
+   // console.log(dealCopy);   
+   // // console.log(index2);
+   
+   
+   const indexTwo = dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!')
+console.log(indexTwo);
+   dealCopy[indexTwo].desc= dealCopy[indexTwo].desc.toString().trim().replace('March',  'April') 
+console.log(dealCopy);
 
-
-
-console.log(dealCopy.toString().replace(dealCopy[index].title,  '10% Off!'))
-console.log(dealCopy[index].title);
-// title: '10% Off!', 
-// desc: 'Applied to your entire order when you spend $30 or more'
-
-// console.log(dealCopy);     // bad way remind self to ask about it 
-/*
-The restaurant is going to continue its
-family deal for another month. 
-
-Reassign the value of the second deal's desc
-to be itself, but use the `replace` method
-to replace the word March with April.
-
-You should also make sure that there is no
-whitespace in this string, since it seems
-to be displaying wrong on the live site.
-*/
-
-//CODE HERE
-
-// dealCopy.toString().replace(dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!'),  'This deal lasts until the end of April!')    ASK HOW TO CHAIN TOINDEX AND REPLACE
-// const index2 = dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!')
-// dealCopy.toString().replace(dealCopy[index2],  'This deal lasts until the end of April!')
-// console.log(dealCopy);   
-// // console.log(index2);
+//NEED HELP IN MAKING IT MORE EFFIECENT
