@@ -204,8 +204,15 @@ console.log(filteredFood);
 */
 
 //CODE HERE
-const filterByProperty = (property,number,type) => { foodArr.filter(el => type ==='below' ? el[property] < number :  el[property] > number)
+// const filterByProperty = filteredFood2 = (property,number,type) => { foodArr.filter(el => type ==='below' ? el[property] < number :  el[property] > number)
 
+
+
+
+function filterByProperty (property,number,type) {
+    filteredFood2 =foodArr.filter(el => type ==='below' ? el[property] < number :  el[property] > number)
+    return filteredFood2
+    
 }
 
 /*
@@ -217,5 +224,5 @@ const filterByProperty = (property,number,type) => { foodArr.filter(el => type =
 
 //CODE HERE
 console.log('--------------------------------------------------');
-filterByProperty('rating',8,'below')
+filterByProperty('price',8,'above')
 console.log(filteredFood2);
