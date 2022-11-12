@@ -32,7 +32,15 @@
 
 //CODE HERE
 
+const pizza = {
+name : 'Ringo' ,
+price :12,
+category :'Hot',
+popularity: 4,
+rating : 12,
+tags : ['great','gluten-free'],
 
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -44,15 +52,16 @@
 
 //CODE HERE
 
-
+console.log(pizza.popularity);
 /*
-    Second, log the second tag in your pizza's
-    tags array.
-    Use a combination of dots and brackets to
-    get the value.
+Second, log the second tag in your pizza's
+tags array.
+Use a combination of dots and brackets to
+get the value.
 */
 
 //CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -63,16 +72,17 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
 
 /*
-    Fourth, and last, destructure the category
-    property.
+Fourth, and last, destructure the category
+property.
 
-    Print the value of your category variable. 
+Print the value of your category variable. 
 */
 
 //CODE HERE
+let {category} = pizza
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,7 +98,51 @@
 */
 
 //CODE HERE
+let foodArr = [{
+name : 'HI' ,
+price :12,
+category :'spicy',
+popularity: 8,
+rating : 4,
+tags : (['idk','gluten-free']),
 
+},
+    {
+name : 'dell' ,
+price :4,
+category :'techy',
+popularity: 6,
+rating : 1,
+tags : (['amazingpizza','easy']),
+
+},
+{
+name : 'extra topping' ,
+price :9,
+category :'topping',
+popularity: 10,
+rating : 3,
+tags : (['gluten-free','amazing']),
+
+},{
+name : 'veg' ,
+price :9,
+category :'tender',
+popularity: 9,
+rating : 3,
+tags : (['money','saver']),
+
+},{
+name : 'barbecue' ,
+price :10,
+category :'sweet',
+popularity: 8,
+rating : 4,
+tags : ['special','gluten-free'],
+
+}
+
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +159,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(pizza => pizza.tags.includes('gluten-free'))
+console.log(filteredFood);
 
 
 
@@ -149,7 +204,9 @@
 */
 
 //CODE HERE
+const filterByProperty = (property,number,type) => { foodArr.filter(el => type ==='below' ? el[property] < number :  el[property] > number)
 
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +216,6 @@
 */
 
 //CODE HERE
+console.log('--------------------------------------------------');
+filterByProperty('rating',8,'below')
+console.log(filteredFood2);
