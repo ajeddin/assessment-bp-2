@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => 
+curr.name === 'pasta' ? acc:acc + curr.price,0 ) // messing arund and left out pasta 
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,8 +56,8 @@ const cart = [
 
 //CODE HERE
 
-
-
+const calcFinalPrice = (cartTotal,couponValue,tax) =>{return cartTotal =((cartTotal*(1+tax))-couponValue)  }
+console.log(calcFinalPrice(150,20,.08))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -78,7 +79,13 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    Cart Object should have 
+    name / name of perosn
+    address/ where to deliever or possibkt where to market
+    id // electronic id to keep track of a lot of customers
+    card contents // so they no waht ehy bought
+    total // total ammount paid
+
 
 */
 
@@ -88,3 +95,12 @@ const cart = [
 */
 
 //CODE HERE
+let cusObj = [
+{
+name : 'Richard Clark',
+address : '1 hacker way',
+id : 3253455,
+cartContents : ['Barbecue Pizza', 'Special Soup'],
+totalCart: 45.99,
+}
+]
