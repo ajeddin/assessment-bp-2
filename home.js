@@ -20,6 +20,7 @@
     argument, `greetUser` should return the string:
     'Welcome back, Andrew'
 */
+console.log('-----------------------------------------')
 
 //CODE HERE
 const greetUser = (username) => {
@@ -31,58 +32,60 @@ greetUser('Andrew')
 
 //////////////////PROBLEM 2////////////////////
 /* 
-    Below is an array of zip codes that are in
-    the restaurant's delivery zone. 
+Below is an array of zip codes that are in
+the restaurant's delivery zone. 
 
-    Write a function called `canWeDeliver` that
-    takes in one argument, `zipCode`.
+Write a function called `canWeDeliver` that
+takes in one argument, `zipCode`.
 
-    If the zip code passed in is in the array,
-    return a string letting the user know they
-    are eligible for delivery. If they are not, 
-    return a string letting them know that. 
+If the zip code passed in is in the array,
+return a string letting the user know they
+are eligible for delivery. If they are not, 
+return a string letting them know that. 
 
     For example:
     canWeDeliver(84606) 
-        // `Sorry, we can't deliver to that address`
+    // `Sorry, we can't deliver to that address`
     canWeDeliver(85205) 
         // `You're in our delivery zone!`
-*/
-
-const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-
-//CODE HERE
-const canWeDeliver =(zipCode,arr = deliveryAreaZipCodes) => {
-    if (arr.includes(zipCode)) {
-        console.log(`You're in our delivery zone!`); 
-    }else{
-        console.log(`Sorry, we can't deliver to that address`); 
+        */
+       console.log('-----------------------------------------')
+       
+       const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
+       
+       //CODE HERE
+       const canWeDeliver =(zipCode,arr = deliveryAreaZipCodes) => {
+           if (arr.includes(zipCode)) {
+               console.log(`You're in our delivery zone!`); 
+            }else{
+                console.log(`Sorry, we can't deliver to that address`); 
+                
+            }
+        }
         
-    }
-}
-
-canWeDeliver(85203)
-/* 
-Problem 2 Continued
-
-Now you're going to rewrite your function.
-
-If you wrote `canWeDeliver` using a loop of
-some kind, write a new function (`canWeDeliverTwo`)
-below, using the `includes` array method. 
-Look it up on MDN if you're not sure how to use 
-it. 
-
-If you already used the `includes` method, 
-write a new function using some sort of 
-loop (for loop, higher order array method).
-Name your new function `canWeDeliverTwo`.
-*/
+        canWeDeliver(85203)
+        /* 
+        Problem 2 Continued
+        
+        Now you're going to rewrite your function.
+        
+        If you wrote `canWeDeliver` using a loop of
+        some kind, write a new function (`canWeDeliverTwo`)
+        below, using the `includes` array method. 
+        Look it up on MDN if you're not sure how to use 
+        it. 
+        
+        If you already used the `includes` method, 
+        write a new function using some sort of 
+        loop (for loop, higher order array method).
+        Name your new function `canWeDeliverTwo`.
+        */
+console.log('-----------------------------------------')
 
 // CODE HERE
 const canWeDeliverTwo= (zipCode,arr=deliveryAreaZipCodes) => {
     currentZipIteration=arr[0]
-
+    
     for (i=0;i<arr.length;i++){
         if (currentZipIteration!==(zipCode)) {
             currentZipIteration=arr[i]
@@ -98,15 +101,15 @@ const canWeDeliverTwo= (zipCode,arr=deliveryAreaZipCodes) => {
 canWeDeliverTwo(85203)
 //////////////////PROBLEM 3////////////////////
 /* 
-    Below is an array of objects that have some
-    information about a couple of deals that are
-    available at the restaurant currently. 
+Below is an array of objects that have some
+information about a couple of deals that are
+available at the restaurant currently. 
 
-    You are going to access the object's properties 
-    and change some values. Don't edit the array 
-    directly, let's use the `replace` method.
+You are going to access the object's properties 
+and change some values. Don't edit the array 
+directly, let's use the `replace` method.
 
-    Read on for more instructions.
+Read on for more instructions.
 */
 
 const deals = [
@@ -121,14 +124,14 @@ const deals = [
 ]
 
 /*
-    The owner has decided to take the 15% off
-    deal down to 10%.
+The owner has decided to take the 15% off
+deal down to 10%.
 
-    Reassign the value of the first deal's title
-    to be itself, but use the `replace` method
-    to replace the 15 with a 10.
+Reassign the value of the first deal's title
+to be itself, but use the `replace` method
+to replace the 15 with a 10.
 */
-console.log('-----------------------------------------\n-----------------------------------------');
+console.log('-----------------------------------------')
 //CODE HERE
 
 // deal = deals.replace(deals.title ,'10% Off!')
@@ -143,6 +146,7 @@ console.log(index);
     
     
     
+    console.log('-----------------------------------------')
     
     
     dealCopy[index].title= dealCopy[index].title.toString().replace('15',  '10') ///// need help with this it works not effienct tho
@@ -171,13 +175,14 @@ console.log(index);
    // dealCopy.toString().replace(dealCopy[index2],  'This deal lasts until the end of April!')
    // console.log(dealCopy);   
    // // console.log(index2);
+   console.log('-----------------------------------------')
    
    
    const indexTwo = dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!')
-console.log(indexTwo);
+   console.log(indexTwo);
    dealCopy[indexTwo].desc= dealCopy[indexTwo].desc.toString().trim().replace('March',  'April') 
-console.log(dealCopy);
-
-//NEED HELP IN MAKING IT MORE EFFIECENT
-
-console.log(`If didnt msg you already i must have already forgotten about telling you, i need help with function chaining, replace functions, selecting from multiple obj in an array, using callback syntax, `); 
+   console.log(dealCopy);
+   
+   //NEED HELP IN MAKING IT MORE EFFIECENT
+   
+   console.log(`If didnt msg you already i must have already forgotten about telling you, i need help with function chaining, replace functions, selecting from multiple obj in an array, using callback syntax, `); 
