@@ -149,7 +149,7 @@ console.log(index);
     console.log('-----------------------------------------')
     
     
-    dealCopy[index].title= dealCopy[index].title.toString().replace('15',  '10') ///// need help with this it works not effienct tho
+    dealCopy[index].title= dealCopy[index].title.replace('15',  '10') ///// need help with this it works not effienct tho
     console.log(dealCopy);
     // title: '10% Off!', 
     // desc: 'Applied to your entire order when you spend $30 or more'
@@ -180,7 +180,7 @@ console.log(index);
    
    const indexTwo = dealCopy.findIndex((el) => el.desc.trim() === 'This deal lasts until the end of March!')
    console.log(indexTwo);
-   dealCopy[indexTwo].desc= dealCopy[indexTwo].desc.toString().trim().replace('March',  'April') 
+   dealCopy[indexTwo].desc= dealCopy[indexTwo].desc.trim().replace('March',  'April') 
    console.log(dealCopy);
    
    //NEED HELP IN MAKING IT MORE EFFIECENT
